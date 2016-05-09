@@ -46,10 +46,10 @@ $(function(){
                     	<em class="base_userset"></em><span>栏目管理</span></a>
                     </li>
                     
-                    <li><a href="#">
+                    <li url="toPublishMessage.action"><a href="#">
                     	<em class="base_roll"></em><span>信息发布</span></a>
                     </li>
-                    <li><a href="#">
+                    <li url="toManagerMessage.action"><a href="#">
                     	<em class="base_sys"></em><span>信息管理</span></a>
                     </li>
                     <li url="toAddStudent.action"><a href="#">

@@ -10,7 +10,7 @@ import com.briup.cms.common.ConnectionFactory;
 /**
  * 关于栏目信息与数据库交互的类
  * 增删改查方法，不涉及业务逻辑处理
- * @author licy
+ * @author oyxk
  * @date 2016.5.7
  * */
 public class CategoryDao {

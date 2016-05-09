@@ -41,13 +41,44 @@ public class BaseAction extends ActionSupport {
 	 * 跳转到栏目管理
 	 * */
 	@Action(value="toCategoryManager",results={
-			@Result(name="success",
-					location="/WEB-INF/jsp/manager/categoryManager.jsp")
+			@Result(name="success",location="/WEB-INF/jsp/manager/categoryManager.jsp")
 	})
 	public String toCategoryManager(){
 		
 		return "success";
 	}
-	
-	
+	/**
+	 * @author 赵六
+	 * 跳转到信息发布
+	 * */
+	@Action(value="toPublishMessage",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/publishMessage.jsp")
+	})
+	public String toPublishMessage(){
+		
+		return "success";
+	}
+	/**
+	 * @author 李七
+	 * 跳转到信息管理
+	 * */
+	@Action(value="toManagerMessage",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/managerMessage.jsp")
+	})
+	public String toManagerMessage(){
+		
+		return "success";
+	}
+	/**
+	 * @author 刘八
+	 * 跳转到信息管理
+	 * */
+	@Action(value="toAddStudent",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/addStudent.jsp")
+	})
+	public String toAddStudent(){
+		
+		return "success";
+	}
+
 }
