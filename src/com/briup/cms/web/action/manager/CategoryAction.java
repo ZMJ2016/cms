@@ -15,9 +15,7 @@ public class CategoryAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String code;
-	
-	private ICategoryService categoryService 
-							= new CategoryServiceImpl();
+	private ICategoryService categoryService = new CategoryServiceImpl();
 	/**
 	 * 处理添加栏目信息的方法
 	 * */
