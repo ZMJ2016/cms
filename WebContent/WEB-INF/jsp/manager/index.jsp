@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="../theme/1/jquery-easyui-themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="../theme/1/css/easyui-tabs.css">
 <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.form.js"></script>
 <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
 <script type="text/javascript"  src="../theme/1/js/base.js"></script>
 <script type="text/javascript">
@@ -53,7 +54,7 @@ $(function(){
                     	<em class="base_sys"></em><span>信息管理</span></a>
                     </li>
                     <li url="toAddStudent.action"><a href="#">
-                    	<em class="base_userset"></em><span>添加学生</span></a>
+                    	<em class="base_basicset"></em><span>添加学生</span></a>
                     </li>
                 </ul>
             </div>

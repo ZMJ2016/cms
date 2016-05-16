@@ -81,4 +81,13 @@ public class BaseAction extends ActionSupport {
 		return "success";
 	}
 
+	/*@Action(value="toAddCategory",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/addCategory.jsp")
+	})
+	public String toAddCategory(){
+		
+		return "success";
+	}
+	*/
+	
 }

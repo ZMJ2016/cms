@@ -2,16 +2,18 @@ package com.briup.cms.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.briup.cms.bean.Category;
 import com.briup.cms.common.ConnectionFactory;
+import com.sun.org.apache.bcel.internal.generic.AALOAD;
 
-/**
+/**                                                           
  * 关于栏目信息与数据库交互的类
  * 增删改查方法，不涉及业务逻辑处理
- * @author oyxk
- * @date 2016.5.7
+ * 
  * */
 public class CategoryDao {
 	/**
@@ -49,6 +51,57 @@ public class CategoryDao {
 	 * @return 包含栏目信息的集合
 	 * */
 	public List<Category> findAll(){
+		
+		List<Category> list = new ArrayList();
+		try {
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			try{
+				//获取连接
+				conn = ConnectionFactory.getConn();
+				String sql = "select*from t_category";
+				pstmt = conn.prepareStatement(sql);
+				//预处理sql
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()){
+					Category category = new Category();
+					long id =  rs.getLong("id");
+					String name = rs.getString("name");
+					String code = rs.getString("code");
+					category.setCode(code);
+					category.setId(id);
+					category.setName(name);
+					list.add(category);
+				
+					
+				}
+			}finally{
+				if(pstmt!=null){
+					pstmt.close();
+				}
+				if(conn!=null){
+					conn.close();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 		return null;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

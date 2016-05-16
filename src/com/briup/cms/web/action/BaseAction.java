@@ -3,6 +3,7 @@ package com.briup.cms.web.action;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 
+import com.briup.cms.service.ICategoryService;
 import com.opensymphony.xwork2.ActionSupport;
 /**
  * 前台基础Action
@@ -10,7 +11,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class BaseAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
-	
+	//private ICategoryService cate
 	/**
 	 * 跳转到前台的首页
 	 * http://ip:port/项目名/命名空间/action名.后缀
